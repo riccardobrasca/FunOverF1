@@ -5,9 +5,13 @@ defaultTargets = ["FunOverF1"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
-relaxedAutoImplicit = false
+autoImplicit = false # no "assume a typo is a new variable"
+relaxedAutoImplicit = false # no "assume a typo is a new variable"
+maxSynthPendingDepth = 3 # same as mathlib, changes behaviour of typeclass inference
+# Enable all mathlib linters: automatically matches what mathlib uses.
 weak.linter.mathlibStandardSet = true
-maxSynthPendingDepth = 3
+weak.linter.flexible = true
+weak.linter.style.header = false
 
 [[require]]
 name = "mathlib"
