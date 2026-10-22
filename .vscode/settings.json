@@ -13,6 +13,7 @@
 	".gitignore": true,
 	"lake-manifest.json": true,
 	"lakefile.lean": true,
+	"lakefile.toml": true,
 	"README.md": true,
 	"Library.lean": true,
 	"lean-toolchain": true,
@@ -31,6 +32,10 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "files.readonlyInclude": {
+      "**/.elan/**": true,
+      "**/.lake/**": true
+    },
     "cSpell.enabledFileTypes": {
       "lean4": false
     },
